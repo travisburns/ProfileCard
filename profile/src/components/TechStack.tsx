@@ -17,7 +17,7 @@ const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel }) => {
       <ul className='tech list bg-slate-950 relative '>
        {
         skills.map((skill, index) => (
-            <li className='text-[1.3rem] text-white' key={index}>
+            <li className='text-[1.9rem] text-white' key={index}>
                 {skill.name}
                 <span>
                     {skill.level}

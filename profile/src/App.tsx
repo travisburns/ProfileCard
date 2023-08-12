@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import TechStack from './components/TechStack';
 
@@ -7,9 +7,22 @@ type Skill = {
   level: number;
 };
 
+
+
+
+
 function App() {
-  const [skills, setSkills] = useState<Skill[]>([
-    { name: 'Html:', level: 0 },
+  const [skills, setSkills] = useState<Skill[]>([]);
+
+  // Load skills from local storage when the component mounts
+  useEffect(() => {
+    const storedSkills = localStorage.getItem('skills');
+    if (storedSkills) {
+      setSkills(JSON.parse(storedSkills));
+    } else {
+      // Set default skills if none are stored
+      setSkills([
+        { name: 'Html', level: 0 },
     { name: 'Css:', level: 0 },
     { name: 'Javascript:', level: 0 },
     { name: 'SCSS:', level: 0 },
@@ -29,12 +42,16 @@ function App() {
     { name: 'C#:', level: 0 },
     { name: 'Typescript:', level: 0 },
     // Add more skills here
-  ]);
+ 
+      ]);
+    }
+  }, []);
 
   const updateSkillLevel = (index: number) => {
     setSkills(prevSkills => {
       const updatedSkills = [...prevSkills];
-      updatedSkills[index].level ++;
+      updatedSkills[index].level++;
+      localStorage.setItem('skills', JSON.stringify(updatedSkills)); // Save skills to local storage
       return updatedSkills;
     });
   };
@@ -47,3 +64,10 @@ function App() {
 }
 
 export default App;
+
+
+
+    
+ 
+
+  
