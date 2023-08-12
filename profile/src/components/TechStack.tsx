@@ -12,16 +12,16 @@ type TechStackProps = {
 
 const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel }) => {
   return (
-    <div>
-      <h1>Tech Skills</h1>
-      <ul className='tech list'>
+    <div className=''>
+      <h1 className='text-[3rem]'>Tech Skills</h1>
+      <ul className='tech list bg-slate-950 relative '>
        {
         skills.map((skill, index) => (
-            <li key={index}>
+            <li className='text-[1.3rem] text-white' key={index}>
                 {skill.name}
                 <span>
                     {skill.level}
-                    <button className='bg-blue-500' onClick={() => updateSkillLevel(index)}>Add Level</button>
+                    <button className='bg-blue-500 text-[.9rem]' onClick={() => updateSkillLevel(index)}>Add Level</button>
                 </span>
             </li>
         ))
