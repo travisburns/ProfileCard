@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import TechStack from './components/TechStack';
+import SleepSchedule from './components/SleepSchedule';
 
 type Skill = {
   name: string;
@@ -68,6 +69,7 @@ function App() {
   return (
     <div>
       <TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel} />
+      <SleepSchedule  />
     </div>
   );
 }
