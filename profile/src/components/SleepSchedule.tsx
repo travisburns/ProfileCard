@@ -17,10 +17,17 @@ const SleepSchedule = () => {
   
     return (
     <div className='bg-purple-900 text-white'>
-       <ul>
-        <button onClick={()=> sleepTime()}>Submit Time</button>
+        <h1 className='text-[5rem]'>Sleep Schedule</h1>
+        <form>
+            <input type="text" placeholder='Time went to bed ' className='text-black' />
+        <button className='text-[2rem] bg-black' onClick={()=> sleepTime()}>Submit Time</button>
+        </form>
+        <h2>Submitted Times</h2>
+        <ul>
+            
+        </ul>
         
-        </ul> 
+        
     </div>
   )
 }
