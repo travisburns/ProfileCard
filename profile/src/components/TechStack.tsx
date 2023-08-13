@@ -8,9 +8,10 @@ type Skill = {
 type TechStackProps = {
     skills: Skill[];
     updateSkillLevel: (index: number) => void;
+    decreaseSkillLevel: (index: number) => void;
 }
 
-const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel }) => {
+const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decreaseSkillLevel }) => {
   return (
     <div className=''>
       <h1 className='text-[3rem]'>Tech Skills</h1>
@@ -22,6 +23,7 @@ const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel }) => {
                 <span>
                     {skill.level}
                     <button className='bg-blue-500 text-[.9rem]' onClick={() => updateSkillLevel(index)}>Add Level</button>
+                    <button className='bg-red-500 text-[.9rem]' onClick={() => decreaseSkillLevel(index)}>Decrease Level</button>
                 </span>
             </li>
         ))

@@ -56,9 +56,18 @@ function App() {
     });
   };
 
+  const decreaseSkillLevel = (index: number) => {
+    setSkills(prevSkills => {
+      const updatedSkills = [...prevSkills];
+      updatedSkills[index].level--;
+      localStorage.setItem('skills', JSON.stringify(updatedSkills)); // Save skills to local storage
+      return updatedSkills;
+    });
+  };
+
   return (
     <div>
-      <TechStack skills={skills} updateSkillLevel={updateSkillLevel} />
+      <TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel} />
     </div>
   );
 }
