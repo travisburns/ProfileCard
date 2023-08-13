@@ -18,13 +18,18 @@ const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decrease
       <ul className='tech list bg-slate-950 relative '>
        {
         skills.map((skill, index) => (
-            <li className='text-[1.9rem] text-white' key={index}>
+            <li className='text-[1.9rem] text-white flex justify-evenly' key={index}>
+                <div>
                 {skill.name}
-                <span>
-                    {skill.level}
-                    <button className='bg-blue-500 text-[.9rem]' onClick={() => updateSkillLevel(index)}>Add Level</button>
-                    <button className='bg-red-500 text-[.9rem]' onClick={() => decreaseSkillLevel(index)}>Decrease Level</button>
-                </span>
+                <div className="buttons">
+                <button className='bg-blue-500 text-[.9rem] mr-1' onClick={() => updateSkillLevel(index)}>Add Level</button>
+                <button className='bg-red-500 text-[.9rem]' onClick={() => decreaseSkillLevel(index)}>Decrease Level</button>
+                </div>
+               </div>
+                <div>
+                {skill.level} 
+                </div>
+                
             </li>
         ))
        }
