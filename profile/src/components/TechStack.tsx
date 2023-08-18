@@ -14,7 +14,7 @@ type TechStackProps = {
 const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decreaseSkillLevel }) => {
   return (
     <div className='bg-slate-900 max-w-[100%]'>
-      <h1 className='text-[3rem]'>Tech Skills</h1>
+      <h1 className='text-[3rem] text-white'>Tech Skills</h1>
       <ul className='tech list bg-slate-950 relative flex max-w-[40%]'>
        {
         skills.map((skill, index) => (

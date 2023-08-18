@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import TechStack from './components/TechStack';
+
 import SleepSchedule from './components/SleepSchedule';
+import TechTimeline from './components/TechTimeline';
+import SkillLevelSummary from './components/SkillLevelSummary';
+import TodoList from './components/TodoList';
 
 type Skill = {
   name: string;
@@ -66,10 +70,17 @@ function App() {
     });
   };
 
+  const totalSkillLevel = skills.reduce((total, skill) => total + skill.level, 0 )
+
   return (
     <div>
+      <div className='flex'>
       <TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel} />
+      <SkillLevelSummary totalSkillLevel={totalSkillLevel} />
+      </div>
       <SleepSchedule  />
+      <TechTimeline />
+      <TodoList />
     </div>
   );
 }
