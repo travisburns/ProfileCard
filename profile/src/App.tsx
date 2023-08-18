@@ -6,6 +6,7 @@ import SleepSchedule from './components/SleepSchedule';
 import TechTimeline from './components/TechTimeline';
 import SkillLevelSummary from './components/SkillLevelSummary';
 import TodoList from './components/TodoList';
+import Crypto from './components/Crypto';
 
 type Skill = {
   name: string;
@@ -81,6 +82,7 @@ function App() {
       <SleepSchedule  />
       <TechTimeline />
       <TodoList />
+      <Crypto />
     </div>
   );
 }
