@@ -19,7 +19,7 @@ const Crypto = () => {
       <p>Cardano $300</p>
       <p>XRP: $400</p>
       <p>Meme Coin $100, potentially NUDES COIN</p>
-
+      <h2>Exchanges: Kraken-needs new account. Bitstamp, Cex.io</h2>
       
     </div>
   )

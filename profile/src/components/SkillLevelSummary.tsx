@@ -16,7 +16,7 @@ const SkillLevelSummary: React.FC<SkillLevelSummaryProps> = ({ totalSkillLevel }
       return { text: 'Intermediate', colorClass: 'text-green-500' };
     } else if (level >= 636) {
       return { text: 'Novice', colorClass: 'text-blue-500' };
-    } else {
+    } else  {
       return { text: 'Beginner', colorClass: 'text-gray-500' };
     }
   };
