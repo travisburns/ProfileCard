@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Calendar from './Calender';
 
 const TodoList: React.FC = () => {
   const [todos, setTodos] = useState<string[]>([]);
@@ -43,6 +44,7 @@ const TodoList: React.FC = () => {
           </li>
         ))}
       </ul>
+      <Calendar />
     </div>
   );
 };
