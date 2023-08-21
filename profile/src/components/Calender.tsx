@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { format, addDays, startOfMonth, endOfMonth, isSameDay } from 'date-fns';
 
 interface Task {
@@ -23,10 +23,7 @@ const Calendar: React.FC = () => {
   };
 
   const handleTaskDateChange = (date: Date) => {
-    // Set the selected date to the end of the day
-    const endDate = new Date(date);
-    endDate.setHours(23, 59, 59, 999);
-    setSelectedDate(endDate);
+    setSelectedDate(date);
   };
 
   const monthStartDate = startOfMonth(selectedDate);
@@ -39,6 +36,17 @@ const Calendar: React.FC = () => {
     daysInMonth.push(currentDate);
     currentDate = addDays(currentDate, 1);
   }
+
+  // Load tasks from local storage on component mount
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]') as Task[];
+    setTasks(storedTasks);
+  }, []);
+
+  // Save tasks to local storage whenever tasks change
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <div className='p-4'>
@@ -55,13 +63,11 @@ const Calendar: React.FC = () => {
           Add Task
         </button>
         <input
-  type='date'
-  value={format(selectedDate, 'yyyy-MM-dd')}
-  onChange={(e) => handleTaskDateChange(new Date(e.target.value))}
-  min={format(monthStartDate, 'yyyy-MM-dd')}
-  max={format(monthEndDate, 'yyyy-MM-dd')}
-  className='border p-2 ml-2'
-/>
+          type='date'
+          value={format(selectedDate, 'yyyy-MM-dd')}
+          onChange={(e) => handleTaskDateChange(new Date(e.target.value))}
+          className='border p-2 ml-2'
+        />
       </div>
       <div className='grid grid-cols-7 gap-2'>
         {daysInMonth.map((day, index) => {

@@ -9,6 +9,7 @@ type SleepStats = {
   awakeTime: string;
   offRoutine: boolean;
   dreams: string;
+  disruptions: string;
 };
 
 const SleepSchedule = () => {
@@ -21,7 +22,8 @@ const SleepSchedule = () => {
     date: '',
     awakeTime: '',
     offRoutine: false,
-    dreams: ''
+    dreams: '',
+    disruptions: ''
   });
 
   useEffect(() => {
@@ -54,7 +56,8 @@ const SleepSchedule = () => {
       date: '',
       awakeTime: '',
       offRoutine: false,
-      dreams: ''
+      dreams: '',
+      disruptions: ''
     });
   };
 
@@ -139,6 +142,14 @@ const SleepSchedule = () => {
       />
       Rejuvanted?
     </label>
+    <input
+      type='text'
+      name='disruptions'
+      placeholder='Disruptions'
+      value={newEntry.disruptions}
+      onChange={handleInputChange}
+      className='text-black mr-2'
+    />
   <button className='text-[2rem] bg-black' type='submit'>
     Submit Time
   </button>
@@ -146,7 +157,7 @@ const SleepSchedule = () => {
 
       <h2 className='text-2xl text-slate-500 mt-4'>Submitted Times</h2>
 
-      <ul className=' p-4 flex flex-wrap'>
+      <ul className=' p-4 flex '>
         {sleepEntries.map((entry, index) => (
           <li key={index} className='border-b border-gray-300 py-2 mr-[1rem] bg-blue-500 w-1/7'>
             <p className='bg-black'>Date: {entry.date}</p>
@@ -157,6 +168,7 @@ const SleepSchedule = () => {
             <p>Mood: {entry.mood}</p>
             <p>Off Routine: {entry.offRoutine}</p>
             <p>Dreams: {entry.dreams}</p>
+            <p>Disruptions: {entry.disruptions}</p>
             <button onClick={() => handleDeleteEntry(index)} className='text-white bg-red-500'>
               Delete
             </button>
