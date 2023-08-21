@@ -7,6 +7,7 @@ import TechTimeline from './components/TechTimeline';
 import SkillLevelSummary from './components/SkillLevelSummary';
 import TodoList from './components/TodoList';
 import Crypto from './components/Crypto';
+import Home from './components/Home';
 
 type Skill = {
   name: string;
@@ -76,6 +77,7 @@ function App() {
   return (
     <div>
       <div className='flex'>
+        <Home  totalSkillLevel={totalSkillLevel}/>
       <TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel} />
       <SkillLevelSummary totalSkillLevel={totalSkillLevel} />
       </div>

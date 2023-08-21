@@ -26,6 +26,7 @@ const SkillLevelSummary: React.FC<SkillLevelSummaryProps> = ({ totalSkillLevel }
   return (
     <div className="bg-slate-900 p-4 mt-4 max-w-[40%]">
       <p className={`${colorClass}`}>{text} {totalSkillLevel}</p>
+      
     </div>
   );
 };

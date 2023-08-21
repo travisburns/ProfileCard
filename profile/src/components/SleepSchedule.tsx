@@ -61,10 +61,10 @@ const SleepSchedule = () => {
   };
 
   return (
-    <div className='bg-purple-900 text-white p-4'>
+    <div className='bg-purple-900 text-white p-4 w-[100%]'>
       <h1 className='text-5xl'>Sleep Schedule</h1>
       <form onSubmit={handleSubmit}>
-  <div className='flex mb-2'>
+  <div className='flex mb-2 w-[70%]'>
     <input
       type='text'
       name='date'
@@ -131,9 +131,9 @@ const SleepSchedule = () => {
 
       <h2 className='text-2xl text-slate-500 mt-4'>Submitted Times</h2>
 
-      <ul className=' p-4 flex'>
+      <ul className=' p-4 flex flex-wrap'>
         {sleepEntries.map((entry, index) => (
-          <li key={index} className='border-b border-gray-300 py-2 mr-[1rem] bg-blue-500'>
+          <li key={index} className='border-b border-gray-300 py-2 mr-[1rem] bg-blue-500 w-1/7'>
             <p className='bg-black'>Date: {entry.date}</p>
             <p>Time Went to Bed: {entry.time}</p>
             <p>Awake Time: {entry.awakeTime}</p>
