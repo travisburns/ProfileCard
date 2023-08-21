@@ -8,6 +8,7 @@ type SleepStats = {
   date: string;
   awakeTime: string;
   offRoutine: boolean;
+  dreams: string;
 };
 
 const SleepSchedule = () => {
@@ -19,7 +20,8 @@ const SleepSchedule = () => {
     mood: '',
     date: '',
     awakeTime: '',
-    offRoutine: false
+    offRoutine: false,
+    dreams: ''
   });
 
   useEffect(() => {
@@ -51,7 +53,8 @@ const SleepSchedule = () => {
       mood: '',
       date: '',
       awakeTime: '',
-      offRoutine: false
+      offRoutine: false,
+      dreams: ''
     });
   };
 
@@ -124,6 +127,18 @@ const SleepSchedule = () => {
       className='text-black mr-2'
     />
   </div>
+
+  <label className='flex items-center'>
+      <input
+         type='text'
+         name='dreams'
+         placeholder='Dreams'
+         value={newEntry.dreams}
+         onChange={handleInputChange}
+         className='text-black mr-2'
+      />
+      Rejuvanted?
+    </label>
   <button className='text-[2rem] bg-black' type='submit'>
     Submit Time
   </button>
@@ -140,6 +155,8 @@ const SleepSchedule = () => {
             <p>Hours Slept: {entry.hours}</p>
             <p>Rejuvanted: {entry.rejuvanted ? 'Yes' : 'No'}</p>
             <p>Mood: {entry.mood}</p>
+            <p>Off Routine: {entry.offRoutine}</p>
+            <p>Dreams: {entry.dreams}</p>
             <button onClick={() => handleDeleteEntry(index)} className='text-white bg-red-500'>
               Delete
             </button>
