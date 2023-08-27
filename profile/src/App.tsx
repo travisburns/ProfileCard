@@ -20,6 +20,7 @@ import TodoList from './components/TodoList';
 import Crypto from './components/Crypto';
 import Home from './components/Home';
 import Calendar from './components/Calender';
+import Goals from './components/Goals';
 
 type Skill = {
   name: string;
@@ -98,6 +99,7 @@ function App() {
       <Link className='mr-[1rem]' to="todolist">Todolist</Link>
       <Link className='mr-[1rem]' to="crypto">Crypto</Link>
       <Link className='mr-[1rem]' to="calender">Calender</Link>
+      <Link className='mr-[1rem]' to="goals">Goals</Link>
       </nav>
       
       <Routes>
@@ -107,6 +109,7 @@ function App() {
       <Route path="todolist" element={<TodoList /> }></Route>
       <Route path="crypto" element={<Crypto /> }></Route>
       <Route path="calender" element={<Calendar /> }></Route>
+      <Route path="goals" element={<Goals /> }></Route>
       </Routes>
       </BrowserRouter>
        
