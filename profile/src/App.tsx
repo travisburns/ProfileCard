@@ -1,4 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Routes,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
+
+
+
 import './App.css';
 import TechStack from './components/TechStack';
 
@@ -8,6 +19,7 @@ import SkillLevelSummary from './components/SkillLevelSummary';
 import TodoList from './components/TodoList';
 import Crypto from './components/Crypto';
 import Home from './components/Home';
+import Calendar from './components/Calender';
 
 type Skill = {
   name: string;
@@ -73,18 +85,34 @@ function App() {
   };
 
   const totalSkillLevel = skills.reduce((total, skill) => total + skill.level, 0 )
+  
 
   return (
     <div>
-      <div className='flex'>
-        <Home  totalSkillLevel={totalSkillLevel}/>
-      <TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel} />
-      <SkillLevelSummary totalSkillLevel={totalSkillLevel} />
+      <div className=''>
+      <BrowserRouter>
+      <nav className='bg-blue-500 text-white'>
+      <Link to="/">Home</Link>
+      <Link to="techSkills">Tech Skills</Link>
+      <Link to="SleepSchedule">Sleep Schedule</Link>
+      <Link to="todolist">Todolist</Link>
+      <Link to="crypto">Crypto</Link>
+      <Link to="calender">Calender</Link>
+      </nav>
+      
+      <Routes>
+      <Route path="/" element={<Home totalSkillLevel={totalSkillLevel}/>}></Route>
+      <Route path="techSkills" element={<TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel}/>}></Route>
+      <Route path="sleepSchedule" element={<SleepSchedule /> }></Route>
+      <Route path="todolist" element={<TodoList /> }></Route>
+      <Route path="crypto" element={<Crypto /> }></Route>
+      <Route path="calender" element={<Calendar /> }></Route>
+      </Routes>
+      </BrowserRouter>
+       
       </div>
-      <SleepSchedule  />
-      <TechTimeline />
-      <TodoList />
-      <Crypto />
+      
+
     </div>
   );
 }

@@ -50,6 +50,59 @@ const Calendar: React.FC = () => {
 
   return (
     <div className='p-4'>
+      <div>
+      <p>
+      6:00 AM - Wake up
+Ensure you're getting enough quality sleep to wake up refreshed.
+
+6:30 AM - Morning hygiene
+
+7:05 AM - Leave for work
+
+7:30 AM - 10:00 AM - Work
+Focus on essential tasks and maximize productivity during these hours.
+
+10:30 AM - Workout
+Engage in physical activity to boost energy and well-being.
+
+11:30 AM - Crypto Research, Eat
+Fuel yourself with a balanced meal and explore your crypto interests.
+
+12:30 PM - Break
+Take a longer break to recharge mentally.
+
+12:45 PM - Programming, Client Sites
+Dedicate time to programming tasks, including freelance work.
+
+3:45 PM - Learning Programming Theories
+Engage in focused learning during your natural cognitive peak.
+
+7:45 PM - Break
+Enjoy leisure or relaxation activities during this time.
+
+8:00 PM - 8:45 PM: World Building (Imagination and Creativity)
+Engage in creative world-building, focusing on broad ideas and themes.
+
+9:00 PM - Watch Something
+Relax with entertainment to wind down.
+
+9:30 PM - Learning Japanese
+Engage in language learning earlier in the evening for better retention.
+
+9:45 PM - Prepare for Next Day
+Get organized and set priorities for the following day.
+
+10:00 PM - Nightly Routine
+Prepare for sleep with calming activities.
+
+10:30 PM - Sleep
+Ensure you're getting sufficient rest for the day ahead.
+
+      </p>
+
+
+
+      </div>
       <h1 className='text-2xl mb-4'>Calendar</h1>
       <div className='mb-4'>
         <input
