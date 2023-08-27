@@ -92,12 +92,12 @@ function App() {
       <div className=''>
       <BrowserRouter>
       <nav className='bg-blue-500 text-white'>
-      <Link to="/">Home</Link>
-      <Link to="techSkills">Tech Skills</Link>
-      <Link to="SleepSchedule">Sleep Schedule</Link>
-      <Link to="todolist">Todolist</Link>
-      <Link to="crypto">Crypto</Link>
-      <Link to="calender">Calender</Link>
+      <Link className='mr-[1rem]' to="/">Home</Link>
+      <Link className='mr-[1rem]' to="techSkills">Tech Skills</Link>
+      <Link className='mr-[1rem]' to="SleepSchedule">Sleep Schedule</Link>
+      <Link className='mr-[1rem]' to="todolist">Todolist</Link>
+      <Link className='mr-[1rem]' to="crypto">Crypto</Link>
+      <Link className='mr-[1rem]' to="calender">Calender</Link>
       </nav>
       
       <Routes>

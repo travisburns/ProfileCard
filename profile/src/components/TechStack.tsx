@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 type Skill = {
     name: string;
     level: number;
@@ -34,6 +35,10 @@ const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decrease
         ))
        }
       </ul>
+      <div>
+        
+      </div>
+      
     </div>
   )
 }
