@@ -21,6 +21,7 @@ import Crypto from './components/Crypto';
 import Home from './pages/Home/Home';
 import Calendar from './components/Calender';
 import Goals from './components/Goals';
+import Excel from './pages/Excel/Excel';
 
 type Skill = {
   name: string;
@@ -100,6 +101,7 @@ function App() {
       <Link className='' to="crypto">Crypto</Link>
       <Link className='' to="calender">Calender</Link>
       <Link className='' to="goals">Goals</Link>
+      <Link className='' to="data">Data Analysist</Link>
       </nav>
       
       <Routes>
@@ -110,6 +112,7 @@ function App() {
       <Route path="crypto" element={<Crypto /> }></Route>
       <Route path="calender" element={<Calendar /> }></Route>
       <Route path="goals" element={<Goals /> }></Route>
+      <Route path="data" element={<Excel /> }></Route>
       </Routes>
       </BrowserRouter>
        
