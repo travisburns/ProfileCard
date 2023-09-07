@@ -12,7 +12,9 @@ type HomeProps = {
 const Home: React.FC<HomeProps> = ({totalSkillLevel}) => {
   return (
     <>
+    
     <AdminBoard />
+    <h1 className='text-black font-bold ml-[2rem] my-[1rem]'>Skills</h1>
     <TechBoard totalSkillLevel={totalSkillLevel} />
    
   </>

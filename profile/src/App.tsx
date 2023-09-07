@@ -89,7 +89,7 @@ function App() {
   
 
   return (
-    <div className='bg-gray-400'>
+    <div className='bg-[#B5E2FA]'>
       <div className=''>
       <BrowserRouter>
       <nav className='bg-blue-500 text-white'>
