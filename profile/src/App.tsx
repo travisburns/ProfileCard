@@ -89,17 +89,17 @@ function App() {
   
 
   return (
-    <div>
+    <div className=''>
       <div className=''>
       <BrowserRouter>
       <nav className='bg-blue-500 text-white'>
-      <Link className='mr-[1rem]' to="/">Home</Link>
-      <Link className='mr-[1rem]' to="techSkills">Tech Skills</Link>
-      <Link className='mr-[1rem]' to="SleepSchedule">Sleep Schedule</Link>
-      <Link className='mr-[1rem]' to="todolist">Todolist</Link>
-      <Link className='mr-[1rem]' to="crypto">Crypto</Link>
-      <Link className='mr-[1rem]' to="calender">Calender</Link>
-      <Link className='mr-[1rem]' to="goals">Goals</Link>
+      <Link className='' to="/">Home</Link>
+      <Link className='' to="techSkills">Tech Skills</Link>
+      <Link className='' to="SleepSchedule">Sleep Schedule</Link>
+      <Link className='' to="todolist">Todolist</Link>
+      <Link className='' to="crypto">Crypto</Link>
+      <Link className='' to="calender">Calender</Link>
+      <Link className='' to="goals">Goals</Link>
       </nav>
       
       <Routes>
