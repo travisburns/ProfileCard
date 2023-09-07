@@ -18,7 +18,7 @@ import TechTimeline from './components/TechTimeline';
 import SkillLevelSummary from './components/SkillLevelSummary';
 import TodoList from './components/TodoList';
 import Crypto from './components/Crypto';
-import Home from './components/Home';
+import Home from './pages/Home/Home';
 import Calendar from './components/Calender';
 import Goals from './components/Goals';
 
@@ -89,7 +89,7 @@ function App() {
   
 
   return (
-    <div className=''>
+    <div className='bg-gray-400'>
       <div className=''>
       <BrowserRouter>
       <nav className='bg-blue-500 text-white'>
