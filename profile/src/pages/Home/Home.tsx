@@ -6,17 +6,17 @@ import HomeCategories from './HomeCategories';
 
 type HomeProps = {
   totalSkillLevel: number;
-  title: string;
-  attr1: string;
+ 
 };
 
-const Home: React.FC<HomeProps> = ({ totalSkillLevel, title, attr1 }) => {
+const Home: React.FC<HomeProps> = ({ totalSkillLevel}) => {
+  
   return (
     <>
       <AdminBoard />
       <h1 className='text-black font-bold ml-[2rem] my-[1rem]'>Skills</h1>
-      <TechBoard totalSkillLevel={totalSkillLevel} />
-      <HomeCategories title={title} attr1={attr1}/>
+      
+      <HomeCategories totalSkillLevel={totalSkillLevel}/>
     </>
   );
 };

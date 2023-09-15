@@ -105,7 +105,7 @@ function App() {
       </nav>
       
       <Routes>
-      <Route path="/" element={<Home totalSkillLevel={totalSkillLevel}/>}></Route>
+      <Route path="/" element={<Home totalSkillLevel={totalSkillLevel} />}></Route>
       <Route path="techSkills" element={<TechStack skills={skills} updateSkillLevel={updateSkillLevel} decreaseSkillLevel={decreaseSkillLevel}/>}></Route>
       <Route path="sleepSchedule" element={<SleepSchedule /> }></Route>
       <Route path="todolist" element={<TodoList /> }></Route>
