@@ -1,7 +1,7 @@
 type HomeCategory = {
   title: string;
   attr1: string;
-  attr2: React.FC<number>; // Update the type to accept a component
+  attr2: number | null; // Update the type to accept a component
 };
 
 const HomeCategoryCard: React.FC<HomeCategory> = ({ title, attr1, attr2 }) => {
