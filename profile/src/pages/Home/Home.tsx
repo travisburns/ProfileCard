@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AdminBoard from './AdminBoard';
-import TechBoard from './TechBoard';
+
 import HomeCategories from './HomeCategories';
 
 type HomeProps = {

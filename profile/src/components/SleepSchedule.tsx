@@ -67,17 +67,17 @@ const SleepSchedule = () => {
   };
 
   return (
-    <div className='bg-purple-900 text-white p-4 w-[100%]'>
-      <h1 className='text-5xl'>Sleep Schedule</h1>
+    <div className='bg-purple-900 text-white p-6 max-w-[320px] mx-auto'>
+      <h1 className='text-5xl mb-[2.5rem]'>Sleep Schedule</h1>
       <form onSubmit={handleSubmit}>
-  <div className='flex mb-2 w-[70%]'>
+  <div className='mb-[0.5rem] w-[70%] ml-[.5rem]'>
     <input
       type='text'
       name='date'
       placeholder='Date'
       value={newEntry.date}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[.5rem]'
     />
     <input
       type='text'
@@ -85,7 +85,7 @@ const SleepSchedule = () => {
       placeholder='Time went to bed'
       value={newEntry.time}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[.5rem]'
     />
     <input
       type='text'
@@ -93,7 +93,7 @@ const SleepSchedule = () => {
       placeholder='Awake Time'
       value={newEntry.awakeTime}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[1rem]'
     />
     <input
       type='number'
@@ -101,7 +101,7 @@ const SleepSchedule = () => {
       placeholder='Hours Slept?'
       value={newEntry.hours}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[1rem]'
     />
     <label className='flex items-center'>
       <input
@@ -109,7 +109,7 @@ const SleepSchedule = () => {
         name='rejuvanted'
         checked={newEntry.rejuvanted}
         onChange={handleInputChange}
-        className='mr-2'
+        className='mr-2 mb-[1rem]'
       />
       Rejuvanted?
     </label>
@@ -119,7 +119,7 @@ const SleepSchedule = () => {
       placeholder='Mood?'
       value={newEntry.mood}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[1rem]'
     />
     Off Routine?
     <input
@@ -127,18 +127,17 @@ const SleepSchedule = () => {
       name='OffRoutine'
       checked={newEntry.offRoutine}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[1rem]'
     />
-  </div>
 
-  <label className='flex items-center'>
+<label className='flex items-center'>
       <input
          type='text'
          name='dreams'
          placeholder='Dreams'
          value={newEntry.dreams}
          onChange={handleInputChange}
-         className='text-black mr-2'
+         className='text-black mr-2 mb-[1rem]'
       />
       Rejuvanted?
     </label>
@@ -148,18 +147,22 @@ const SleepSchedule = () => {
       placeholder='Disruptions'
       value={newEntry.disruptions}
       onChange={handleInputChange}
-      className='text-black mr-2'
+      className='text-black mr-2 mb-[1rem]'
     />
-  <button className='text-[2rem] bg-black' type='submit'>
+
+  </div>
+
+  
+  <button className='text-[1.5rem] bg-black  ml-[.5rem]' type='submit'>
     Submit Time
   </button>
 </form>
 
       <h2 className='text-2xl text-slate-500 mt-4'>Submitted Times</h2>
 
-      <ul className=' p-4 flex '>
+      <ul className=' p-4 '>
         {sleepEntries.map((entry, index) => (
-          <li key={index} className='border-b border-gray-300 py-2 mr-[1rem] bg-blue-500 w-1/7'>
+          <li key={index} className='border-b border-gray-300 py-2  bg-blue-500'>
             <p className='bg-black'>Date: {entry.date}</p>
             <p>Time Went to Bed: {entry.time}</p>
             <p>Awake Time: {entry.awakeTime}</p>

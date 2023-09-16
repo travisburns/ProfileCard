@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 type Skill = {
     name: string;
     level: number;
@@ -10,9 +11,11 @@ type TechStackProps = {
     skills: Skill[];
     updateSkillLevel: (index: number) => void;
     decreaseSkillLevel: (index: number) => void;
+    textValue: string;
 }
 
-const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decreaseSkillLevel }) => {
+const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decreaseSkillLevel, textValue }) => {
+  console.log(`this is: ${textValue}`)
   return (
     <div className='bg-slate-900 max-w-[100%]'>
       <h1 className='text-[3rem] text-white'>Tech Skills</h1>
@@ -28,7 +31,7 @@ const TechStack: React.FC<TechStackProps> = ({skills, updateSkillLevel, decrease
                 </div>
                </div>
                 <div>
-                {skill.level} 
+                <p> {textValue}  </p>
                 </div>
                 
             </li>

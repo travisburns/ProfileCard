@@ -6,7 +6,7 @@ type HomeCategory = {
 
 const HomeCategoryCard: React.FC<HomeCategory> = ({ title, attr1, attr2 }) => {
   return (
-    <div className='bg-[#0FA3B1]  mb-[4rem] mx-[1.1rem] rounded-3xl w-[50%] text-center text-black text-[1.3rem]'>
+    <div className='bg-[#0FA3B1]  mb-[4rem] mx-[1.1rem] rounded-3xl w-[35%] text-center text-black text-[1.3rem]'>
       <div className='text-[1rem]'>
         <p className='team-card_title'>{title}</p>
         <p className='team-card_attr1'>{attr1}</p>
@@ -33,6 +33,7 @@ const HomeCategories: React.FC<{
       attr1: 'TotalSkillLevel',
       attr2: null, // No component for this category
     },
+  
     // Add more categories as needed
   ];
 
@@ -41,7 +42,7 @@ const HomeCategories: React.FC<{
       <h1 className='text-white font-playfair text-[2.5rem] mb-[10%] ml-[10%] md:text-[4.2rem]'>
         Topics
       </h1>
-      <div className='md:flex flex-wrap md:ml-[10%]'>
+      <div className='flex flex-wrap md:ml-[10%]'>
         {categoryData.map((category, index) => (
           <HomeCategoryCard
             key={index}
